@@ -49,14 +49,19 @@ body {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
 
+.input-field:focus {
+  outline: none !important;
+  border: 1px solid grey;
+}
+
 .input-field:focus + .label-container,
 .input-field:not(:placeholder-shown) + .label-container {
-  transform: translate(-15px, -15px) scale(0.5);
+  transform: translate(-12px, -15px) scale(0.7);
 }
 
 .input-field:focus + .label-container label,
 .input-field:not(:placeholder-shown) + .label-container label {
-  color: rgb(32, 103, 255);
+  color: #666666;
 }
 
 
@@ -73,6 +78,6 @@ body {
   height: 30px;
   border-radius: 3px;
   border: 0;
-  background-color: #6fe1e7;
+  background-color: #7de76f;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
