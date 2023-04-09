@@ -4,33 +4,33 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Musik</title>
+	<title>Music</title>
 	<link rel="stylesheet" href="style.css">
-	<script src="app.js"></script>
+	<script src="script.js"></script>
 </head>
 <body>
 	<header>
-		<h1>Musik</h1>
+		<h1>Music</h1>
 	</header>
 	<main class="container">
 		<div>
 			<h2>Music</h2>
-			<ul id="music-list">
-				<li>Music 1</li>
-				<li>Music 2</li>
-				<li>Music 3</li>
-				<li>Music 4</li>
-				<li>Music 5</li>
+			<ul class="list">
+				<li class="song has-cover">Music 1</li>
+				<li class="song has-cover">Music 2</li>
+				<li class="song has-cover">Music 3</li>
+				<li class="song has-cover">Music 4</li>
+				<li class="song has-cover">Music 5</li>
 			</ul>
 		</div>
 		<div>
 			<h2>Playlists</h2>
-			<ul id="playlist-list">
-				<li>Playlist 1</li>
-				<li>Playlist 2</li>
-				<li>Playlist 3</li>
-				<li>Playlist 4</li>
-				<li>Playlist 5</li>
+			<ul class="list">
+				<li class="has-cover">Playlist 1</li>
+				<li class="has-cover">Playlist 2</li>
+				<li class="has-cover">Playlist 3</li>
+				<li class="has-cover">Playlist 4</li>
+				<li class="has-cover">Playlist 5</li>
 			</ul>
 		</div>
 		<div>
@@ -39,10 +39,10 @@
 			<button id="create-playlist">Create</button>
 		</div>
 		<form action="">
-			<label for="music-select" class="music-upload">
-				Upload new music
+			<label for="select-to-upload" id="music-upload-form">
+				Upload new song
 			</label>
-			<input id="music-select" type="file" name="uploading-music" accept="audio/*">
+			<input id="select-to-upload" type="file" name="uploading-music" accept="audio/*">
 		</form>
 		<audio controls>
 			<source src="music.mp3" type="audio/mpeg">
