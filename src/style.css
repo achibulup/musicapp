@@ -1,22 +1,46 @@
-h1 {
-	height: 70px;
-	text-align: center;
-	margin-bottom: 20px;
-	color: deeppink;
+#root {
+	position:relative;
+	overflow:hidden
 }
 
-body {
-	font-family: Arial, sans-serif;
+.msk-layout {
+	display: flex;
 	margin: 0;
 	padding: 0;
-	background-color: #f2f2f2;
 }
 
-.container {
-	height: 500px;
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 20px;
+.msk-sidebar {
+	display: flex;
+	align-items: str;
+}
+
+.logo-btn {
+	/* display: none; */
+}
+
+.logo-btn span {
+	display: inline-block;
+}
+
+.msk-navbar {
+
+}
+
+
+.msk-navbar-main {
+
+}
+
+.add-song-sidebar {
+
+}
+
+.msk-header {
+
+}
+
+.msk-mainpage {
+
 }
 
 #music-upload-form {
