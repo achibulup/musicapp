@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Music</title>
+	<link rel="stylesheet" href="/src/styles/style.css">
+	<link rel="stylesheet" href="/src/styles/fontawesome.css">
+</head>
+<body>
+  <nav id="menu" class="side-menu">
+    <div class="bar">  
+      <div class="nav-button hamburger-button" onclick="toggleMenu()">
+        <div class="nav-button-appearance">
+          <div class="icon"><i class="fa fa-bars"></i></div>
+        </div>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-button nav-item selected" id="home">
+          <div class="nav-button-appearance">
+            <i class="icon fa fa-home"></i>
+            <span class="nav-item__title">Home</span>
+          </div></li>
+        <li class="nav-button nav-item" id="songs">
+          <div class="nav-button-appearance">
+            <i class="icon fa-solid fa-music"></i>
+            <span class="nav-item__title">Songs</span>
+          </div></li>
+        <li class="nav-button nav-item" id="playlists">
+          <div class="nav-button-appearance">
+            <i class="icon playlist"></i>
+            <span class="nav-item__title">Playlists</span>
+          </div></li>
+        <li class="nav-button nav-item">
+          <div class="nav-button-appearance">
+
+          </div>
+        </li>
+        <li class="nav-button nav-item">
+          <div class="nav-button-appearance">
+
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="cover" onclick="collapseMenu()"></div>
+  </nav>
+	<header>
+		<h1>Music</h1>
+	</header>
+	<main class="container">
+		<div>
+			<h2>Music</h2>
+			<ul class="list">
+				<li class="song has-cover">Music 1</li>
+				<li class="song has-cover">Music 2</li>
+				<li class="song has-cover">Music 3</li>
+				<li class="song has-cover">Music 4</li>
+				<li class="song has-cover">Music 5</li>
+			</ul>
+		</div>
+		<div>
+			<h2>Playlists</h2>
+			<ul class="list">
+				<li class="has-cover">Playlist 1</li>
+				<li class="has-cover">Playlist 2</li>
+				<li class="has-cover">Playlist 3</li>
+				<li class="has-cover">Playlist 4</li>
+				<li class="has-cover">Playlist 5</li>
+			</ul>
+		</div>
+		<div>
+			<label for="playlist-name">Playlist name</label>
+			<input id="playlist-name" type="text" name="playlist-name">
+			<button id="create-playlist">Create</button>
+		</div>
+		<form action="">
+			<label for="select-to-upload" id="music-upload-form">
+				Upload new song
+			</label>
+			<input id="select-to-upload" type="file" name="uploading-music" accept="audio/*">
+		</form>
+		<audio controls>
+			<source src="music.mp3" type="audio/mpeg">
+		</audio>
+	</main>
+
+  
+	<script src="/src/scripts/script.js"></script>
+</body>
+</html>

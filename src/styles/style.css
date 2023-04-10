@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+	height: 70px;
+	text-align: center;
+	margin-bottom: 20px;
+	color: deeppink;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+  padding-left: 50px;
+	background-color: #f2f2f2;
+}
+
+.container {
+	height: 500px;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+#music-upload-form {
+	padding: 20px;
+	border-radius: 10px;
+	background-color: #f38fe2;
+	display: flex;
+	border-radius: 12px;
+	justify-content: space-between;
+	align-items: center;
+	width: fit-content;
+}
+
+#select-to-upload {
+	display: none;
+}
+
+.list {
+	display: flex;
+	padding: 10px;
+	margin: 10px;
+	height: 50px;
+}
+
+.list > li {
+	list-style: none;
+	margin: left;
+	padding: 15px;
+	height: 20px;
+}
+
+.has-cover {
+	background-color: #f38fe2;
+	background-image: none;
+	width: 100px;
+	height: 100px;
+	border-radius: 5px;
+	margin-right: 10px;
+}
+
+.song {
+	align-items: center;
+}
+
+button {
+	background-color: #4CAF50;
+	color: #fff;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+audio {
+	display: block;
+	margin: 20px auto;
+	width: 100%;
+	max-width: 500px;
+}
+
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+.side-menu .bar {
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  background-color: #585858;
+  transition: width 0.3s;
+}
+
+.side-menu.open .bar {
+  width: 200px;
+}
+
+.nav-button {
+  width: 100%;
+  height: 50px;
+  padding: 3px;
+  display: flex;
+}
+
+.nav-button-appearance {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.nav-button:hover > .nav-button-appearance {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  background-color: #777777;
+}
+
+.hamburger-button .icon {
+  width: fit-content;
+  font-size: 20px;
+}
+
+.nav-list {
+  margin-top: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.selected > .nav-button-appearance {
+  background-color: #666666;
+}
+
+.selected:hover > .nav-button-appearance {
+  background-color: #777777;
+}
+
+li.selected > .nav-button-appearance::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #b27df3;
+}
+
+.nav-item__title {
+  display: none;
+  margin-left: 12px;
+}
+
+.side-menu.open .nav-item__title {
+  display: inline;
+}
+
+.side-menu .cover {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.side-menu.open .cover {
+  display: block;
+}
