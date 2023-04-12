@@ -1,3 +1,4 @@
 function toMainPage() {
-    window.location.href = '/src/pages/musik.html';
+    console.log('toMainPage');
+    window.location.href = '../pages/musik.html';
 }
