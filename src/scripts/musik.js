@@ -64,7 +64,7 @@ document.querySelectorAll('.nav-item').forEach(function (item) {
         selectedNav.classList.add('selected');
     });
 });
-var defaultCover = '/asset/images/placeholder.jpg';
+var defaultCover = '../../asset/images/placeholder.jpg';
 var fileInput = document.getElementById('select-to-upload');
 var musicPlayer = document.getElementById('music-player');
 var playButton = nonNull(document.getElementById("play-button"));
