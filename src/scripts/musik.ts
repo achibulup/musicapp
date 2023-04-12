@@ -31,7 +31,7 @@ document.querySelectorAll('.nav-item').forEach(item => {
   })
 });
 
-const defaultCover = '/asset/images/placeholder.jpg';
+const defaultCover = '../../asset/images/placeholder.jpg';
 var fileInput = document.getElementById('select-to-upload') as HTMLInputElement;
 var musicPlayer = document.getElementById('music-player') as HTMLAudioElement;
 const playButton = nonNull(document.getElementById("play-button"));
