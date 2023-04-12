@@ -2,13 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta title="Musik: Login">
+    <title>Musik: Login</title>
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'>
     <link rel="stylesheet" href="/src/styles/login.css">
   </head>
   <body>
     <div class="login-form">
-      <form>
+      <form action="/src/pages/musik.html">
         <h1>Login</h1>
 
         <div class="input-container">
@@ -26,10 +26,12 @@
         </div>
 
         <div class="action">
-          <button type="submit" name="button" class="login-button">Login</button>
+          <button type="submit" name="button" class="login-button" onclick="toMainPage()">Login</button>
         </div>
 
       </form>
     </div>
+
+    <script src="/src/scripts/login.js"></script>
   </body>
 </html>
