@@ -1,4 +1,4 @@
-/// <reference path="utils.d.ts" />
+/// <reference path="utils.ts" />
 /// <reference path="check-credential.ts" />
 // check for credentials, if successful, redirect to main page
 // else, display error message

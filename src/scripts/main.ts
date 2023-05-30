@@ -1,4 +1,4 @@
-/// <reference path="utils.d.ts" />
+/// <reference path="utils.ts" />
 /// <reference path="song.ts" />
 /// <reference path="dom.ts" />
 
