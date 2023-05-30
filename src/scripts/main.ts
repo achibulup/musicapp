@@ -45,10 +45,9 @@ fileInput.onchange = async function(event) {
   const file = nonNull((this as HTMLInputElement).files)[0];
   const songData = await getInfo(file);
   const song = addSong(songData);
-  const songElement = makeSongElement(song);
-  const songListElement = nonNull(document.getElementById('recent-songs'));
-  songListElement.appendChild(songElement);
-  setCurrentSong(song);
+  if (musicPlayer.paused) {
+    setCurrentSong(song);
+  }
 };
 
 function getInfo(file: File) : Promise<SongData> {
@@ -101,7 +100,7 @@ function setCurrentSong(song: SongData) {
   const songCoverElement = document.getElementById("current-song-cover") as HTMLImageElement;
   titleElement.innerText = song.title;
   artistElement.innerText = song.artist ?? 'Unknown';
-  albumElement.innerText = song.album ?? 'Unknown';
+  albumElement.innerText = song.album ?? '';
   songCoverElement.src = song.coverUrl ?? defaultCover;
   musicPlayer.src = song.fileUrl;
 }
@@ -114,25 +113,49 @@ function makeSongElement(song: Song) : HTMLLIElement {
         <div class="song-author">${song.artist ?? 'Unknown'}</div>
       </div>
       <div class="tasks">
-        <div class="task set-fav">
-          <div class="dark-hover-circle">
-            <i class="fa-regular fa-heart"></i>
-          </div>
+        <div class="task set-fav dark-hover-circle">
+          <i class="fa-regular fa-heart"></i>
         </div>
-        <div class="task song-options">
-          <div class="dark-hover-circle">
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-          </div>
+        <div class="task song-options dark-hover-circle">
+          <i class="fa-solid fa-ellipsis-vertical"></i>
         </div>
       </div> 
     </li>`);
-    element.addEventListener('click', () => {
+    element.addEventListener('click', function (this: HTMLElement, event) {
+      darkBlink(this);
       setCurrentSong(song);
       musicPlayer.play();
+    });
+    element.children[1].children[0].addEventListener('click', function (this: HTMLElement, event) {
+      event.stopPropagation();
+      dark2Blink(this);
     });
     return element;
 }
 
+function darkBlink(element: HTMLElement) {
+  element.classList.remove('dark-click-fade');
+  element.classList.add('dark-click-active');
+  setTimeout(() => {
+    element.classList.add('dark-click-fade');
+    element.classList.remove('dark-click-active');
+  }, 5);
+  setTimeout(() => {
+    element.classList.remove('dark-click-fade');
+  }, 100);
+}
+
+function dark2Blink(element: HTMLElement) {
+  element.classList.remove('dark2-click-fade');
+  element.classList.add('dark2-click-active');
+  setTimeout(() => {
+    element.classList.add('dark2-click-fade');
+    element.classList.remove('dark2-click-active');
+  });
+  setTimeout(() => {
+    element.classList.remove('dark2-click-fade');
+  }, 100);
+}
 
 musicPlayer.onplay = function() {
   playButton.classList.remove("fa-play");
